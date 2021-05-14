@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-history.pushState({state: 'home'}, document.title, window.location.origin);
+history.pushState({state: 'home'}, document.title, window.location.href.split("#")[0]);
 
 window.onpopstate = (event) => {
   console.log(event);
