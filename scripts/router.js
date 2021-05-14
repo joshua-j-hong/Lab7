@@ -44,7 +44,6 @@ router.setState = function(state, entry, newState) {
       break;
   }
 
-
   /**
    * - There are three states that your SPA app will have
    *    1. The home page
