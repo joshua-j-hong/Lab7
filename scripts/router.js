@@ -16,7 +16,7 @@ router.setState = function(state, entry, newState) {
       document.querySelector('header h1').innerHTML = 'Journal Entries';
 
       if (newState) {
-        history.pushState({state: 'home'}, document.title, window.location.origin);
+        history.pushState({state: 'home'}, document.title, window.location.href.split("#")[0]);
       }
 
       break;
@@ -25,7 +25,7 @@ router.setState = function(state, entry, newState) {
       document.querySelector('header h1').innerHTML = 'Settings';
 
       if (newState) {
-        history.pushState({state: 'settings'}, document.title, window.location.origin + '#settings');
+        history.pushState({state: 'settings'}, document.title,window.location.href.split("#")[0] + '#settings');
       }
 
       break;
@@ -38,7 +38,7 @@ router.setState = function(state, entry, newState) {
       document.querySelector('header h1').innerHTML = 'Entry ' + entry.number;
 
       if (newState) {
-        history.pushState({state: 'entry', 'entry': entry}, document.title, window.location.origin + '#entry' + entry.number);
+        history.pushState({state: 'entry', 'entry': entry}, document.title, window.location.href.split("#")[0] + '#entry' + entry.number);
       }
 
       break;
